@@ -23,6 +23,7 @@ export default function Navbar() {
                 </Link>
                 <div className="navbar-links">
                     <a href="#features" onClick={scrollToFeatures}>Features</a>
+                    <Link to="/privacy">Privacy</Link>
                     <a href="https://forms.gle/G4uNK3Ye7GuSi6Qa8" target="_blank" rel="noopener noreferrer">Feedback</a>
                     <a
                         href="https://play.google.com/store/search?q=StudyRat&c=apps"
