@@ -20,7 +20,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-links-group">
                     <h4>COMPANY</h4>
-                    <a href="mailto:support@studyrat.app">About</a>
+                    <Link to="/about">About</Link>
                     <Link to="/privacy">Privacy</Link>
                     <Link to="/terms">Terms</Link>
                 </div>
