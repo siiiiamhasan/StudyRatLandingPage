@@ -4,14 +4,293 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="StudyRat — Build better study habits, one day at a time. Track your daily study sessions, focus with a Pomodoro timer, and watch your streak grow." />
-    <link rel="icon" type="image/png" href="/Icon.png" />
+    <link rel="icon" type="image/png" href="./Icon.png" />
     <title>StudyRat — Build Better Study Habits</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: { DEFAULT: '#22C55E', dark: '#16A34A', light: '#DCFCE7' },
+              text: { DEFAULT: '#111827', secondary: '#6B7280' },
+              bg: { DEFAULT: '#FFFFFF', light: '#F0FDF4' },
+              border: '#E5E7EB',
+            },
+            borderRadius: { DEFAULT: '12px', lg: '16px', full: '50px' },
+            boxShadow: { sm: '0 1px 2px rgba(0,0,0,0.05)', DEFAULT: '0 4px 14px rgba(0,0,0,0.06)', lg: '0 10px 40px rgba(0,0,0,0.08)' },
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="./src/style.css" />
 </head>
-<body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+<body class="font-[Inter] text-text bg-bg leading-relaxed antialiased">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
+        <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="./index.html" class="flex items-center gap-2 text-xl font-extrabold text-text">
+                <img src="./Icon.png" alt="StudyRat" width="28" height="28" />
+                <span>StudyRat</span>
+            </a>
+            <div class="flex items-center gap-7">
+                <a href="#features" class="hidden md:block text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200">Features</a>
+                <a href="./privacy.html" class="hidden md:block text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200">Privacy</a>
+                <a href="https://forms.gle/G4uNK3Ye7GuSi6Qa8" target="_blank" rel="noopener noreferrer" class="hidden md:block text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200">Feedback</a>
+                <a href="https://play.google.com/store/search?q=StudyRat&c=apps" target="_blank" rel="noopener noreferrer" 
+                    class="inline-flex items-center gap-2 font-semibold rounded-full bg-primary text-white hover:bg-primary-dark transition-all duration-200 hover:-translate-y-[1px] hover:shadow-[0_4px_12px_rgba(34,197,94,0.3)] px-5 py-2 text-sm">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 md:pt-20 md:pb-24 px-6 md:px-6 bg-bg flex justify-center">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[60px] items-center text-center md:text-left">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-light rounded-full text-[13px] font-semibold text-primary-dark mb-6">
+                        <span class="w-2 h-2 bg-primary rounded-full"></span>
+                        Now Available on Android
+                    </div>
+                    <h1 class="text-3xl md:text-[48px] font-extrabold leading-[1.15] mb-5 tracking-tight">
+                        Build Better Study Habits,
+                        <span class="text-gradient block md:inline">One Day at a Time</span>
+                    </h1>
+                    <p class="text-[17px] text-text-secondary leading-relaxed mb-8 max-w-[480px] mx-auto md:mx-0">
+                        Track your daily study sessions with beautiful analytics, powerful streak tracking, and a minimalist interface designed to keep you focused and accountable.
+                    </p>
+                    <a href="https://play.google.com/store/search?q=StudyRat&c=apps" target="_blank" rel="noopener noreferrer" 
+                        class="inline-flex items-center gap-2 font-semibold rounded-full bg-primary text-white hover:bg-primary-dark transition-all duration-200 hover:-translate-y-[1px] hover:shadow-[0_4px_12px_rgba(34,197,94,0.3)] px-8 py-[14px] text-base">
+                        Download Now
+                        <span class="text-xl leading-none">&rsaquo;</span>
+                    </a>
+                </div>
+                <div class="flex justify-center">
+                    <div class="phone-mockup w-[280px] md:w-[320px]">
+                        <div class="p-5">
+                            <div class="flex mb-5 bg-[#F3F4F6] rounded-[10px] p-[3px]">
+                                <span class="flex-1 text-center py-2 text-[13px] font-semibold text-text bg-white rounded-lg shadow-sm cursor-default">Today</span>
+                                <span class="flex-1 text-center py-2 text-[13px] font-semibold text-text-secondary rounded-lg cursor-default">Analytics</span>
+                                <span class="flex-1 text-center py-2 text-[13px] font-semibold text-text-secondary rounded-lg cursor-default">Profile</span>
+                            </div>
+                            <!-- Habit 1 -->
+                            <div class="flex items-center gap-3 py-3.5 border-b border-[#F3F4F6]">
+                                <div class="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0 bg-[#DBEAFE]">
+                                    <i data-lucide="book-open" class="w-4 h-4 text-[#3B82F6]"></i>
+                                </div>
+                                <div class="flex-1 flex flex-col">
+                                    <span class="text-sm font-semibold text-text">Mathematics</span>
+                                    <span class="text-xs text-text-secondary">12 day streak</span>
+                                </div>
+                                <div class="w-7 h-7 rounded-full flex items-center justify-center text-sm shrink-0 border-2 border-primary bg-primary text-white">&#10003;</div>
+                            </div>
+                            <!-- Habit 2 -->
+                            <div class="flex items-center gap-3 py-3.5 border-b border-[#F3F4F6]">
+                                <div class="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0 bg-[#FEF3C7]">
+                                    <i data-lucide="target" class="w-4 h-4 text-[#F59E0B]"></i>
+                                </div>
+                                <div class="flex-1 flex flex-col">
+                                    <span class="text-sm font-semibold text-text">Physics</span>
+                                    <span class="text-xs text-text-secondary">8 day streak</span>
+                                </div>
+                                <div class="w-7 h-7 rounded-full flex items-center justify-center text-sm shrink-0 border-2 border-primary bg-primary text-white">&#10003;</div>
+                            </div>
+                            <!-- Habit 3 -->
+                            <div class="flex items-center gap-3 py-3.5">
+                                <div class="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0 bg-[#EDE9FE]">
+                                    <i data-lucide="zap" class="w-4 h-4 text-[#7C3AED]"></i>
+                                </div>
+                                <div class="flex-1 flex flex-col">
+                                    <span class="text-sm font-semibold text-text">Chemistry</span>
+                                    <span class="text-xs text-text-secondary">5 day streak</span>
+                                </div>
+                                <div class="w-7 h-7 rounded-full flex items-center justify-center text-lg shrink-0 border-2 border-border text-text-secondary leading-none">&#9675;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-[100px] px-6 bg-bg flex justify-center" id="features">
+            <div class="max-w-[1200px] mx-auto text-center w-full">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight">
+                    Everything you need to
+                    <span class="text-gradient">ace your exams</span>
+                </h2>
+                <p class="text-base text-text-secondary max-w-[500px] mx-auto mb-12">
+                    Powerful features designed to help you track, analyze, and improve your daily study routines.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                    <!-- Feature Cards -->
+                    <div class="p-7 border border-border rounded-2xl bg-white transition-all duration-200 hover:border-primary hover:shadow-DEFAULT hover:-translate-y-0.5">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-primary-light">
+                            <i data-lucide="check-square" class="w-[22px] h-[22px] text-primary"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2">Daily Tracking</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Simple, intuitive interface to check off your study subjects each day. Build momentum with visual feedback.</p>
+                    </div>
+                    <div class="p-7 border border-border rounded-2xl bg-white transition-all duration-200 hover:border-primary hover:shadow-DEFAULT hover:-translate-y-0.5">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-[#DBEAFE]">
+                            <i data-lucide="bar-chart-3" class="w-[22px] h-[22px] text-[#3B82F6]"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2">Advanced Analytics</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Beautiful charts and insights to understand your progress. Consistency scores, momentum tracking, and more.</p>
+                    </div>
+                    <div class="p-7 border border-border rounded-2xl bg-white transition-all duration-200 hover:border-primary hover:shadow-DEFAULT hover:-translate-y-0.5">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-[#FED7AA]">
+                            <i data-lucide="flame" class="w-[22px] h-[22px] text-[#EA580C]"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2">Streak System</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Stay motivated with powerful streak tracking. Never break the chain and watch your consistency grow.</p>
+                    </div>
+                    <div class="p-7 border border-border rounded-2xl bg-white transition-all duration-200 hover:border-primary hover:shadow-DEFAULT hover:-translate-y-0.5">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-primary-light">
+                            <i data-lucide="download" class="w-[22px] h-[22px] text-primary"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2">Data Backup</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Export and import your data anytime. Your progress is always safe with JSON backup and restore.</p>
+                    </div>
+                    <div class="p-7 border border-border rounded-2xl bg-white transition-all duration-200 hover:border-primary hover:shadow-DEFAULT hover:-translate-y-0.5">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-[#EDE9FE]">
+                            <i data-lucide="bell" class="w-[22px] h-[22px] text-[#7C3AED]"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2">Smart Reminders</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Set custom reminders for each study subject. Follow-up alerts, quiet hours, and streak rescue notifications.</p>
+                    </div>
+                    <div class="p-7 border border-border rounded-2xl bg-white transition-all duration-200 hover:border-primary hover:shadow-DEFAULT hover:-translate-y-0.5">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-[#FEF3C7]">
+                            <i data-lucide="timer" class="w-[22px] h-[22px] text-[#F59E0B]"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2">Focus Timer</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Built-in Pomodoro timer with customizable durations. Track your focused study time with precision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Section -->
+        <section class="py-[100px] px-6 bg-bg flex justify-center overflow-hidden">
+            <div class="max-w-[1200px] mx-auto text-center w-full">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight">
+                    See it in <span class="text-gradient">action</span>
+                </h2>
+                <p class="text-base text-text-secondary max-w-[500px] mx-auto mb-12 leading-relaxed">
+                    Experience the beautiful interface and powerful features that make StudyRat your perfect companion.
+                </p>
+                <div class="relative flex items-center justify-center min-h-[380px] md:min-h-[480px] mb-8">
+                    <button class="carousel-arrow-left absolute left-1 md:left-0 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full border border-border bg-white flex items-center justify-center cursor-pointer transition-all duration-200 text-text-secondary shadow-sm hover:border-primary hover:text-primary hover:shadow-DEFAULT" aria-label="Previous screenshot">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+                    <div class="carousel-track">
+                        <!-- Items rendered via JS to keep offsets consistent -->
+                        <div class="carousel-slide"><img src="./src/assets/1.jpg" alt="Screenshot 1"/></div>
+                        <div class="carousel-slide"><img src="./src/assets/2.jpg" alt="Screenshot 2"/></div>
+                        <div class="carousel-slide active"><img src="./src/assets/5.jpg" alt="Screenshot 5"/></div>
+                        <div class="carousel-slide"><img src="./src/assets/3.jpg" alt="Screenshot 3"/></div>
+                        <div class="carousel-slide"><img src="./src/assets/4.jpg" alt="Screenshot 4"/></div>
+                    </div>
+                    <button class="carousel-arrow-right absolute right-1 md:right-0 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full border border-border bg-white flex items-center justify-center cursor-pointer transition-all duration-200 text-text-secondary shadow-sm hover:border-primary hover:text-primary hover:shadow-DEFAULT" aria-label="Next screenshot">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div class="flex justify-center gap-2.5">
+                    <button class="carousel-dot w-2.5 h-2.5 rounded-full border-none bg-border cursor-pointer transition-all duration-200 hover:bg-primary" aria-label="Go to 1"></button>
+                    <button class="carousel-dot w-2.5 h-2.5 rounded-full border-none bg-border cursor-pointer transition-all duration-200 hover:bg-primary" aria-label="Go to 2"></button>
+                    <button class="carousel-dot active w-2.5 h-2.5 rounded-full border-none bg-primary scale-125 cursor-pointer transition-all duration-200" aria-label="Go to 3"></button>
+                    <button class="carousel-dot w-2.5 h-2.5 rounded-full border-none bg-border cursor-pointer transition-all duration-200 hover:bg-primary" aria-label="Go to 4"></button>
+                    <button class="carousel-dot w-2.5 h-2.5 rounded-full border-none bg-border cursor-pointer transition-all duration-200 hover:bg-primary" aria-label="Go to 5"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Strip -->
+        <section class="py-10 px-6 bg-bg-light border-y border-[#E5E7EB] flex justify-center">
+            <div class="max-w-[1200px] mx-auto flex justify-center flex-wrap gap-5 md:gap-8">
+                <div class="flex items-center gap-2 text-sm font-semibold text-primary-dark">
+                    <i data-lucide="shield" class="w-5 h-5 text-primary"></i><span>100% Offline & Private</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm font-semibold text-primary-dark">
+                    <i data-lucide="globe" class="w-5 h-5 text-primary"></i><span>6 Languages Supported</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm font-semibold text-primary-dark">
+                    <i data-lucide="target" class="w-5 h-5 text-primary"></i><span>Exam Countdown Timer</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm font-semibold text-primary-dark">
+                    <i data-lucide="zap" class="w-5 h-5 text-primary"></i><span>Burnout Detection</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm font-semibold text-primary-dark">
+                    <i data-lucide="book-open" class="w-5 h-5 text-primary"></i><span>Built for Students</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm font-semibold text-primary-dark">
+                    <i data-lucide="clock" class="w-5 h-5 text-primary"></i><span>Focus Heatmaps</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-[100px] px-6 bg-bg-light flex justify-center">
+            <div class="max-w-[600px] mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">
+                    Start building better study habits
+                    <span class="text-gradient">today</span>
+                </h2>
+                <p class="text-base text-text-secondary mb-8 leading-relaxed">
+                    Join thousands of students who use StudyRat to stay consistent, focused, and on track for their exams.
+                </p>
+                <a href="https://play.google.com/store/search?q=StudyRat&c=apps" target="_blank" rel="noopener noreferrer" 
+                    class="inline-flex items-center gap-2 font-semibold rounded-full bg-primary text-white hover:bg-primary-dark transition-all duration-200 hover:-translate-y-[1px] hover:shadow-[0_4px_12px_rgba(34,197,94,0.3)] px-8 py-[14px] text-base">
+                    Get StudyRat Free
+                    <span class="text-xl leading-none">&rsaquo;</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-12 px-6 pb-6 bg-bg border-t border-border flex justify-center">
+        <div class="max-w-[1200px] mx-auto w-full">
+            <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 md:gap-12 pb-8">
+                <div>
+                    <div class="flex items-center gap-2 text-lg font-extrabold mb-2 text-text">
+                        <img src="./Icon.png" alt="StudyRat" width="24" height="24" />
+                        <span>StudyRat</span>
+                    </div>
+                    <p class="text-sm text-text-secondary">Build better study habits, one day at a time.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-text-secondary mb-3">Product</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="#features" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Features</a>
+                        <a href="https://play.google.com/store/search?q=StudyRat&c=apps" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Download</a>
+                        <a href="https://forms.gle/G4uNK3Ye7GuSi6Qa8" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Feedback</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-text-secondary mb-3">Company</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="./about.html" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">About</a>
+                        <a href="./privacy.html" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Privacy</a>
+                        <a href="./terms.html" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-[1200px] mx-auto pt-5 border-t border-border">
+                <p class="text-[13px] text-text-secondary">&copy; <span id="year">2026</span> StudyRat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="./src/main.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="StudyRat — About Us" />
+    <link rel="icon" type="image/png" href="./Icon.png" />
+    <title>About Us — StudyRat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: { DEFAULT: '#22C55E', dark: '#16A34A', light: '#DCFCE7' },
+              text: { DEFAULT: '#111827', secondary: '#6B7280' },
+              bg: { DEFAULT: '#FFFFFF', light: '#F0FDF4' },
+              border: '#E5E7EB',
+            },
+            borderRadius: { DEFAULT: '12px', lg: '16px', full: '50px' },
+            boxShadow: { sm: '0 1px 2px rgba(0,0,0,0.05)', DEFAULT: '0 4px 14px rgba(0,0,0,0.06)', lg: '0 10px 40px rgba(0,0,0,0.08)' },
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body class="font-[Inter] text-text bg-bg leading-relaxed antialiased">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
+        <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="./index.html" class="flex items-center gap-2 text-xl font-extrabold text-text">
+                <img src="./Icon.png" alt="StudyRat" width="28" height="28" />
+                <span>StudyRat</span>
+            </a>
+            <div class="flex items-center gap-7">
+                <a href="./index.html#features" class="hidden md:block text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200">Features</a>
+                <a href="./privacy.html" class="hidden md:block text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200">Privacy</a>
+                <a href="https://forms.gle/G4uNK3Ye7GuSi6Qa8" target="_blank" rel="noopener noreferrer" class="hidden md:block text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200">Feedback</a>
+                <a href="https://play.google.com/store/search?q=StudyRat&c=apps" target="_blank" rel="noopener noreferrer" 
+                    class="inline-flex items-center gap-2 font-semibold rounded-full bg-primary text-white hover:bg-primary-dark transition-all duration-200 hover:-translate-y-[1px] hover:shadow-[0_4px_12px_rgba(34,197,94,0.3)] px-5 py-2 text-sm">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="py-[60px] pb-20 px-6 bg-bg min-h-[60vh] flex justify-center">
+        <div class="max-w-[720px] mx-auto w-full">
+            <h1 class="text-[32px] font-extrabold mb-2">About StudyRat</h1>
+
+            <p class="text-[15px] text-text-secondary leading-relaxed mb-3">
+                StudyRat is a free, offline study habit tracker built for students who want to stay consistent, focused, and on track for their exams. Whether you're preparing for board exams, university finals, or competitive tests — StudyRat helps you build a daily study routine and stick to it.
+            </p>
+
+            <h2 class="text-lg font-bold mt-7 mb-2.5">Our Mission</h2>
+            <p class="text-[15px] text-text-secondary leading-relaxed mb-3">
+                We believe that great results come from daily consistency, not last-minute cramming. StudyRat was created to give every student a simple, distraction-free tool to track their study habits, monitor their progress, and stay motivated — without ads, accounts, or data collection.
+            </p>
+
+            <h2 class="text-lg font-bold mt-7 mb-2.5">What Makes StudyRat Different</h2>
+            <ul class="pl-6 mb-3 list-disc">
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">100% Offline & Private</strong> — Your data never leaves your device. No servers, no cloud, no tracking. Everything stays on your phone.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Completely Free</strong> — No ads, no in-app purchases, no premium tiers. Every feature is available to everyone.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Built for Students</strong> — Designed specifically around study workflows: daily habit check-offs, exam countdowns, streak tracking, and focus sessions.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">6 Languages Supported</strong> — Use StudyRat in your preferred language for a more comfortable experience.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Burnout Detection</strong> — Smart insights that help you recognize when you're overworking and need rest.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Focus Heatmaps</strong> — Visualize your study patterns over time with beautiful heatmap charts.</li>
+            </ul>
+
+            <h2 class="text-lg font-bold mt-7 mb-2.5">Key Features</h2>
+            <ul class="pl-6 mb-3 list-disc">
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Daily Tracking</strong> — Check off your study subjects each day with a clean, intuitive interface.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Advanced Analytics</strong> — Charts, consistency scores, and momentum tracking to understand your progress.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Streak System</strong> — Stay motivated with powerful streak tracking. Never break the chain.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Focus Timer</strong> — Built-in Pomodoro timer with customizable durations to track focused study time.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Smart Reminders</strong> — Custom notifications for each subject with follow-up alerts and quiet hours.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Data Backup</strong> — Export and import your data anytime with JSON backup and restore.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Exam Countdown</strong> — Set your exam date and see exactly how many days you have left.</li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1"><strong class="font-semibold text-text">Home Screen Widget</strong> — Android widget showing your streak, tasks completed, and exam countdown.</li>
+            </ul>
+
+            <h2 class="text-lg font-bold mt-7 mb-2.5">Who Built This</h2>
+            <p class="text-[15px] text-text-secondary leading-relaxed mb-3">
+                StudyRat is an independent project built by a solo developer who understands the challenges students face. It was born out of the need for a simple, honest study tool — one that respects your privacy and actually helps you study without distractions.
+            </p>
+
+            <h2 class="text-lg font-bold mt-7 mb-2.5">Get in Touch</h2>
+            <p class="text-[15px] text-text-secondary leading-relaxed mb-3">
+                Have feedback, suggestions, or found a bug? We'd love to hear from you.
+            </p>
+            <ul class="pl-6 mb-3 list-disc">
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1">Email: <a href="mailto:siamhasan2002x@gmail.com" class="text-primary font-medium hover:underline">siamhasan2002x@gmail.com</a></li>
+                <li class="text-[15px] text-text-secondary leading-relaxed mb-1">Feedback Form: <a href="https://forms.gle/G4uNK3Ye7GuSi6Qa8" target="_blank" rel="noopener noreferrer" class="text-primary font-medium hover:underline">Submit Feedback</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-12 px-6 pb-6 bg-bg border-t border-border flex justify-center">
+        <div class="max-w-[1200px] mx-auto w-full">
+            <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 md:gap-12 pb-8">
+                <div>
+                    <div class="flex items-center gap-2 text-lg font-extrabold mb-2 text-text">
+                        <img src="./Icon.png" alt="StudyRat" width="24" height="24" />
+                        <span>StudyRat</span>
+                    </div>
+                    <p class="text-sm text-text-secondary">Build better study habits, one day at a time.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-text-secondary mb-3">Product</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="./index.html#features" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Features</a>
+                        <a href="https://play.google.com/store/search?q=StudyRat&c=apps" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Download</a>
+                        <a href="https://forms.gle/G4uNK3Ye7GuSi6Qa8" target="_blank" rel="noopener noreferrer" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Feedback</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-text-secondary mb-3">Company</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="./about.html" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">About</a>
+                        <a href="./privacy.html" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Privacy</a>
+                        <a href="./terms.html" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-[1200px] mx-auto pt-5 border-t border-border">
+                <p class="text-[13px] text-text-secondary">&copy; <span id="year">2026</span> StudyRat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="./src/main.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
