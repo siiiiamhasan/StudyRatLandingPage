@@ -1,4 +1,58 @@
-import { useEffect } from 'react';
+import React from "react";
+
+const Privacy = () => (
+  <div className="max-w-2xl mx-auto px-4 py-10 text-gray-800">
+    <h1 className="text-3xl font-bold mb-6 text-center">Privacy Policy</h1>
+    <p className="mb-2"><strong>Effective Date:</strong> [Effective Date]</p>
+    <p className="mb-4">
+      Thank you for using StudyRat ("we", "us", or "our"). This Privacy Policy explains how we collect, use, and protect your information when you use our study-tracking app, including focus timers and gamified features.
+    </p>
+    <h2 className="text-xl font-semibold mt-6 mb-2">1. Data Collection</h2>
+    <ul className="list-disc pl-6 mb-4">
+      <li>
+        <strong>Study Sessions & Progress:</strong> Data about your study sessions, focus timers, and gamification progress is stored locally on your device and, if you choose, in cloud storage to enable backup and synchronization across devices.
+      </li>
+      <li>
+        <strong>Personal Information:</strong> We do not require you to provide personal information to use the core features of StudyRat. If you contact us for support, we may collect your email address and any information you provide.
+      </li>
+    </ul>
+    <h2 className="text-xl font-semibold mt-6 mb-2">2. Data Usage</h2>
+    <ul className="list-disc pl-6 mb-4">
+      <li>Provide and improve StudyRat’s features.</li>
+      <li>Save your study progress and gamification achievements.</li>
+      <li>Respond to your support requests.</li>
+    </ul>
+    <p className="mb-4">
+      We do not sell or share your personal data with third parties for marketing purposes.
+    </p>
+    <h2 className="text-xl font-semibold mt-6 mb-2">3. Third-Party Services</h2>
+    <p className="mb-4">
+      StudyRat may use third-party services (such as analytics or cloud storage providers) that may collect information as described in their own privacy policies. We encourage you to review the privacy policies of any third-party services you use in connection with StudyRat.
+    </p>
+    <h2 className="text-xl font-semibold mt-6 mb-2">4. Security</h2>
+    <p className="mb-4">
+      We take reasonable measures to protect your data from unauthorized access, loss, or misuse. However, no method of transmission or storage is 100% secure.
+    </p>
+    <h2 className="text-xl font-semibold mt-6 mb-2">5. Data Deletion Rights</h2>
+    <p className="mb-4">
+      You have the right to delete your data at any time. You can:
+    </p>
+    <ul className="list-disc pl-6 mb-4">
+      <li>Delete your study data from within the app.</li>
+      <li>Contact us at [Your Email Address] to request deletion of any data stored on our servers.</li>
+    </ul>
+    <h2 className="text-xl font-semibold mt-6 mb-2">6. Changes to This Policy</h2>
+    <p className="mb-4">
+      We may update this Privacy Policy from time to time. We will notify you of any changes by updating the effective date at the top of this page.
+    </p>
+    <h2 className="text-xl font-semibold mt-6 mb-2">7. Contact Us</h2>
+    <p>
+      If you have any questions or concerns about this Privacy Policy, please contact us at [Your Email Address].
+    </p>
+  </div>
+);
+
+export default Privacy;import { useEffect } from 'react';
 
 export default function Privacy() {
     useEffect(() => { window.scrollTo(0, 0); }, []);
