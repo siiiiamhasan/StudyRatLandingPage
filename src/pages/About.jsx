@@ -50,7 +50,7 @@ export default function About() {
                     Have feedback, suggestions, or found a bug? We'd love to hear from you.
                 </p>
                 <ul>
-                    <li>Email: <a href="mailto:support@studyrat.app">support@studyrat.app</a></li>
+                    <li>Email: <a href="mailto:siamhasan2002x@gmail.com">siamhasan2002x@gmail.com</a></li>
                     <li>Feedback Form: <a href="https://forms.gle/G4uNK3Ye7GuSi6Qa8" target="_blank" rel="noopener noreferrer">Submit Feedback</a></li>
                 </ul>
             </div>

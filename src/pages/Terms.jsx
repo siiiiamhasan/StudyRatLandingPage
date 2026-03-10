@@ -80,7 +80,7 @@ export default function Terms() {
                 <h2>12. Contact Us</h2>
                 <p>
                     If you have any questions about these Terms of Service, please contact us at{' '}
-                    <a href="mailto:support@studyrat.app">support@studyrat.app</a>.
+                    <a href="mailto:siamhasan2002x@gmail.com">siamhasan2002x@gmail.com</a>.
                 </p>
             </div>
         </main>
